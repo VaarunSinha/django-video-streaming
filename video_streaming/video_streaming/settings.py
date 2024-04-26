@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "user_of_package",
     "corsheaders",
 ]
-
+CELERY_BROKER_URL = "redis://localhost:6379"
+CELERY_RESULT_BACKEND = "redis://localhost:6379"
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
