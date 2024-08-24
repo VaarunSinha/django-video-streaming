@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import serve_m3u8
+from .views import create_celery_task, send_fake_progress
 
 urlpatterns = [
-    # ... other URL patterns
-    path("<int:video_id>/", serve_m3u8, name="serve_m3u8"),
+    path("api/create_task/", create_celery_task, name="create_celery_task"),
+    path("api/fake-event/<str:task_id>/", send_fake_progress, name="fake-prog"),
 ]
