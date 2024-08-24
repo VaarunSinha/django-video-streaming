@@ -153,3 +153,4 @@ cython_debug/
 hls_videos/
 uploads/
 celerybeat-schedule.db
+dump.rdb
